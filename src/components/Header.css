@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  padding: 1rem;
+}
+
+header > div {
+  flex: .5;
+  margin: 0 auto;
+  text-align: center;
+}

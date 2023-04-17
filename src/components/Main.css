@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+main > div {
+  width: 50%;
+  height: 50%;
+}
+
