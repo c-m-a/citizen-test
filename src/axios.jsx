@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'http://192.168.1.11:8081',
+  baseURL: import.meta.env.VITE_REACT_APP_HOST,
 })
 
 export default instance
