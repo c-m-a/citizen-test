@@ -1,4 +1,5 @@
-export default function CitizenList() {
+export default function CitizenList({ citizens }) {
+  console.log(citizens)
   return <div>
     <table>
       <thead>
@@ -10,12 +11,14 @@ export default function CitizenList() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-        </tr>
+        { citizens.map(c => (
+          <tr key={c.ssn}>
+            <td>{c.firstName}</td>
+            <td>{c.lastName}</td>
+            <td>{c.address}</td>
+            <td>{c.ssn}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </div> 
