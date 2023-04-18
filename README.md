@@ -29,12 +29,3 @@ npm run dev
 * **SSN:** debe tener el siguiente formato ###-##-#### (cada # es un número, los guiones son obligatorios).
 * Si el front no cumple con las validaciones, se debe deshabilitar el botón de enviar.
 
-## Condiciones y tips
-* Los colores y formas son de caracter ilustrativo.
-* No es necesario que sea mobile responsive.
-* No es necesaria compatibilidad con IE o Edge.
-* Se puede usar ES6 y HTML5 sin problemas.
-* Se puede usar google :D.
-* Se puede usar POSTMAN para verificar el funcionamento de la API.
-* Crear un archivo README.md para indicar cómo se debe ejecutar la aplicación.
-* Subir a un repositorio git con privilegios públicos de lectura y compartir el link como resultado.
