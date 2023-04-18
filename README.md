@@ -2,7 +2,7 @@
 
 Aplicacion en React que utiliza la libreria axios para consumir una Rest API del siguiente codigo -> [Member](https://github.com/newcombin/devskillsadv)
 
-![alt text](https://github.com/c-m-a/citizen-test/blob/main/docs/design.png "Citizen Web App")
+![alt text](https://github.com/c-m-a/citizen-test/blob/main/citizen-screenshot-app.png "Citizen Web App")
 
 # Instrucciones de Instalacion
 
