@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import axios from '../axios'
+
 import './CitizenForm.css'
 
-export default function CitizenForm() {
+export default function CitizenForm({ token, citizens, setCitizens }) {
   const [disabled, setDisabled] = useState(true)
 
   const [citizen, setCitizen] = useState({
@@ -34,11 +36,6 @@ export default function CitizenForm() {
     }))
   }
 
-  const saveCitizen = e => {
-    e.preventDefault()
-    console.log('save')
-  }
-
   const validate = () => {
     const ssnRe = /\d{3}\-\d{2}\-\d{4}/
     let errors = {}
@@ -60,8 +57,31 @@ export default function CitizenForm() {
     return [ isValid, errors ]
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
+    e.preventDefault()
+    let config = {}
+    const data = { 
+      firstName: firstName.trim(),
+      lastName: lastName.trim(),
+      address: address.trim(),
+      ssn
+    }
 
+    if (token) {
+      config = {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+
+      const res = await axios.post('/api/members', data, config)
+
+      if (res.status === 200) {
+        setCitizens(prevCitizens => [ ...prevCitizens, data])
+      } else {
+        alert(res.message)
+      }
+    }
   }
 
   useEffect(() => {
@@ -103,7 +123,7 @@ export default function CitizenForm() {
       />
       <div className="citizenButtons">
         <button onClick={resetCitizen}>Reset</button>
-        <button onClick={saveCitizen} disabled={disabled}>Save</button>
+        <button disabled={disabled}>Save</button>
       </div>
     </form>
   </div>
