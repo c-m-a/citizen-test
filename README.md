@@ -7,7 +7,7 @@ Aplicacion en React que utiliza la libreria axios para consumir una Rest API del
 * Clonar este repositorio: `git clone https://github.com/c-m-a/citizen-test.git`
 * Ubicarse en el directorio: `cd citizen-test`
 * Instalar las dependencias: `npm i`
-* Luego modificar las variables de entorno en el archivo .env
+* Luego modificar las variables de entorno *username, password y host* en el archivo .env
 
 ```bash
 vscode .env
