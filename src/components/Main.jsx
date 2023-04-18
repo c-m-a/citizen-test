@@ -12,8 +12,8 @@ export default function Main() {
 
   const getToken = () => {
     axios.post('/auth', {
-      username: 'sarah',
-      password: 'connor'
+      username: import.meta.env.VITE_REACT_APP_USERNAME,
+      password: import.meta.env.VITE_REACT_APP_PASSWORD
     }).then(res => setToken(res.data.token))
     .catch(err => alert(`${err.message}, please check your connection`))
   }
